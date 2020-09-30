@@ -13,5 +13,16 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- <script>
+      使用下面的原生ajax，会发现response中的数据是json，而使用axios，会发现res是数组而不是json，表示axios隐式调用了json.parse方法！
+      let request = new XMLHttpRequest()
+        request.open('GET','http://localhost:3000/api/articles')
+        request.send()
+        request.onreadystatechange = function () {//ajax P4
+            if (this.readyState === 4) {
+                console.log(this.response);
+            }
+        }
+    </script> -->
   </body>
 </html>
